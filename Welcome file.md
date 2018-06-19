@@ -34,16 +34,17 @@
  - WESDK 基础依赖库（包括了 W3MUI.framework）
  - WE.xcworkspace 工作空间（双击打开如下图）
  2图
- 
+ ![enter image description here](https://onebox.huawei.com/p/155930a4c3e8e5e6731309f7c0b37fed)
 ## 3.1 基础集成
 
 #### 3.1.1 导入动态库
 将 W3MUI.framework 引入工程。
 按照图片中序号设置好 W3MUI.framework 库作为您的工程依赖。
 1图
+![enter image description here](https://onebox.huawei.com/p/155930a4c3e8e5e6731309f7c0b37fed)
 
 3图
-
+![enter image description here](https://onebox.huawei.com/p/155930a4c3e8e5e6731309f7c0b37fed)
 库文件说明
 |类文件|说明  |
 |--|--|
@@ -448,5 +449,5 @@ btn.backgroundColor = [UIColor grayColor];
 > 注意，上述代码依赖 Masonry 库。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc5Mzg4MTQ0XX0=
+eyJoaXN0b3J5IjpbMjQxOTQzODE1XX0=
 -->
