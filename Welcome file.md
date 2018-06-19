@@ -54,8 +54,8 @@
 | WKMStandardPlayer.h | 播放器的标准实现，提供标准的 UI 交互 |
 | WKMPlayerViewController.h | 集成了标准播放器的控制器类，提供一个初始化 URL 参数即可使用 |
 
-#### 3.1.2  协议说明
-##### 3.1.2.1 WKMPlayerDelegate
+## 3.2  协议说明
+### 3.2.1 WKMPlayerDelegate
 这个协议主要包括播放器状态变化相关的回调，比如播放中，暂停，停止，播放错误，以及拖放进度，缓冲值变化等等。
 
 当播放器初始化完毕，加载资源成功可以播放时会回调下面这个代理方法
@@ -174,9 +174,7 @@ typedef NS_OPTIONS(NSUInteger, MPMovieLoadState) {
 */
 - (void)player:(id<WKMPlayerProtocol>)player didReceiveFirstAudioFrame:(BOOL)didReceived;
 ```
-
-
-##### 3.1.2.2 WKMPlayerProtocol
+### 3.2.2 WKMPlayerProtocol
 播放器自身的一些能力，具体的播放器实现必须都实现了，这个协议是播放器的具体实现类来实现的，播放器开放的标准方法。
 
 下面属性 playerView 所有具体的播放器实现都会拥有此属性，这个就是播放视图
@@ -383,19 +381,19 @@ typedef NS_ENUM(NSInteger, WKMPlayerState) {
 - (NSString *)biteRate;
 ```
 
-#### 3.1.3 代码集成
-##### 3.1.3.1 引入头文件
+## 3.3 代码集成
+### 3.3.1 引入头文件
 ```c
 #import <W3MUI/W3MUI.h>
 ```
-##### 3.1.3 .2 提供 URL 快速实例化一个标准播放器的控制器
+#### 3.3.1 .1 提供 URL 快速实例化一个标准播放器的控制器
 ```c
 WKMPlayerViewController *vc = [[WKMPlayerViewController alloc] initWithUrl:@“http://abc.com/xyz.mp4”];
 [self.navigationController pushViewController:vc animated:YES];
 // [self presentViewController:vc animated:YES  completion:nil];
 ```
 > 注意，支持 Push 和 Present，自动处理返回按钮的 Pop 和 Dismiss。    
-##### 3.1.3 .3  初始化 WKMStandardPlayer 一个具有标准播放器 UI 交互的视图 UIView 子类
+#### 3.3.1 .2  初始化 WKMStandardPlayer 一个具有标准播放器 UI 交互的视图 UIView 子类
 ```c
 NSString *url = @"http://abc/xyz.mp4";
 WKMStandardPlayer *player = [[WKMStandardPlayer alloc] initWithUrl:url];
@@ -423,7 +421,7 @@ btn.backgroundColor = [UIColor grayColor];
 }];
 ```
 > 注意，上述代码依赖 Masonry 库。
-##### 3.1.3 .4 实例化 WKMPlayer 播放器视图，完全自定义所有 UI 包括进度条。
+#### 3.3.1 .3 实例化 WKMPlayer 播放器视图，完全自定义所有 UI 包括进度条。
 ```c
 - (void)viewDidLoad {
 	[super viewDidLoad];
@@ -449,5 +447,5 @@ btn.backgroundColor = [UIColor grayColor];
 > 注意，上述代码依赖 Masonry 库。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQxOTQzODE1XX0=
+eyJoaXN0b3J5IjpbLTE2NDgxODQxMTBdfQ==
 -->
