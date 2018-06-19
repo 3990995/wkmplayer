@@ -22,18 +22,30 @@
  - 支持 CPU 架构：armv7,arm64,i386,x86_64
  - 含有 i386和 x86_64模拟器版本的库文件，播放功能完全支持模拟器。
 # 3 快速集成
-[下载](https://onebox.huawei.com/p/b95819b787020a3ae4ad1f67260c777f) W3MUI.framework.zip 解压缩到本地目录，或者更新 WESDK 库。
+下载 [W3MUI.framework.zip](https://onebox.huawei.com/p/b95819b787020a3ae4ad1f67260c777f) W3MUI.framework.zip 解压缩到本地目录，或者更新 WESDK 库。
 >最终开发完成发布后才可以在 WESDK 基础库中更新到包含了 WKMPlayer 的W3MUI.framework
 
+下载 [ WKMPlayerDemo.zip](https://onebox.huawei.com/p/2ec79f2ea958c49690525fee18fd0b0c)解压到本地目录
+目录结构：
 
-## Delete a file
+ - Embedded 依赖库嵌入目录
+ - W3MUIDemo 怎么使用 WKMPlayer 的 Demo 示例代码
+ - WEPlus 主工程
+ - WESDK 基础依赖库（包括了 W3MUI.framework）
+ - WE.xcworkspace 工作空间（双击打开如下图）
+ ![enter image description here](https://clouddrive-dgg.huawei.com/api/dg4FF7C5813daa2d57366c349665d4e2e9a555ac97E07A3D83901984EB/a01128e59f06b02576631f9b67342370/2.png)
 
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
 
-## Export a file
 
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
 
+## 3.1 基础集成
+
+#### 3.1.1 导入动态库
+将 W3MUI.framework 引入工程。
+按照图片中序号设置好 W3MUI.framework 库作为您的工程依赖。
+![enter image description here](https://clouddrive-dgg.huawei.com/api/dg7284039Dffabbed65fab6b3f8248364cf4b3b6a43B7852F0C581768A/af07d87048e0aed43bc56c58ddf8b924/1.png)
+
+![enter image description here](https://clouddrive-dgg.huawei.com/api/dg8768628B183c12bfdcbc0427780db93944c2a1f8D0F304526ECA19AE/458a40776a0ac7f5e0c3b0ca7fa9b410/3.png)
 
 # Synchronization
 
@@ -149,5 +161,5 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MDMwODIwNF19
+eyJoaXN0b3J5IjpbLTExNDkwNDUyMDhdfQ==
 -->
