@@ -33,19 +33,26 @@
  - WEPlus 主工程
  - WESDK 基础依赖库（包括了 W3MUI.framework）
  - WE.xcworkspace 工作空间（双击打开如下图）
- ![enter image description here](https://clouddrive-dgg.huawei.com/api/dg4FF7C5813daa2d57366c349665d4e2e9a555ac97E07A3D83901984EB/a01128e59f06b02576631f9b67342370/2.png)
-
-
-
-
+ 2图
+ 
 ## 3.1 基础集成
 
 #### 3.1.1 导入动态库
 将 W3MUI.framework 引入工程。
 按照图片中序号设置好 W3MUI.framework 库作为您的工程依赖。
-![enter image description here](https://clouddrive-dgg.huawei.com/api/dg7284039Dffabbed65fab6b3f8248364cf4b3b6a43B7852F0C581768A/af07d87048e0aed43bc56c58ddf8b924/1.png)
+1图
 
-![enter image description here](https://clouddrive-dgg.huawei.com/api/dg8768628B183c12bfdcbc0427780db93944c2a1f8D0F304526ECA19AE/458a40776a0ac7f5e0c3b0ca7fa9b410/3.png)
+3图
+
+库文件说明
+|类文件|说明  |
+|--|--|
+| WKMPlayerDelegate.h | 这协议是供调用方做回调用的，比如播放进度播放值的变化，播放器状态的变化等等 |
+| WKMPlayerProtocol.h|播放器自身的一些能力，具体的播放器实现必须都实现了|
+| WKMPlayer.h | 播放器对外公开的方法（接口）使用者可以调用，最终会由具体的播放器提供商实现，调用方无需关心具体实现是 ucloud 还是其他播放器，播放器对外公开的类 |
+| WKMStandardPlayer.h | 播放器的标准实现，提供标准的 UI 交互 |
+| WKMPlayerViewController.h | 集成了标准播放器的控制器类，提供一个初始化 url 参数即可使用 |
+#### 3.1.2 代码集成
 
 # Synchronization
 
@@ -161,5 +168,5 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDkwNDUyMDhdfQ==
+eyJoaXN0b3J5IjpbNDg2ODk4OTQzXX0=
 -->
