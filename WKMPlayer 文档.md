@@ -22,10 +22,10 @@
  - 支持 CPU 架构：armv7,arm64,i386,x86_64
  - 含有 i386和 x86_64模拟器版本的库文件，播放功能完全支持模拟器。
 # 3 快速集成
-下载 [W3MUI.framework.zip](https://onebox.huawei.com/p/b95819b787020a3ae4ad1f67260c777f) W3MUI.framework.zip 解压缩到本地目录，或者更新 WESDK 库。
+下载 [W3MUI.framework.zip](https://onebox.huawei.com/p/38a70925165bab14ec465cf6582e8562) W3MUI.framework.zip 解压缩到本地目录，或者更新 WESDK 库。
 >最终开发完成发布后才可以在 WESDK 基础库中更新到包含了 WKMPlayer 的W3MUI.framework
 
-下载 [ WKMPlayerDemo.zip](https://onebox.huawei.com/p/7d4e4af26d6f0da62b769999b26b9c21)解压到本地目录
+下载 [ WKMPlayerDemo.zip](https://onebox.huawei.com/p/d009bfb891b5fcb847557aba5f24a1f3)解压到本地目录
 目录结构：
 
  - Embedded 依赖库嵌入目录
@@ -464,5 +464,5 @@ WKMPlayerViewController 控制器中开放了属性 player，也可以通过这�
 > 注意，上述代码依赖 Masonry 库。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1MjI5OTAzNV19
+eyJoaXN0b3J5IjpbODc5NTYxODc5XX0=
 -->
