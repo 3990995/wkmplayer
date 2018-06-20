@@ -393,6 +393,7 @@ WKMPlayerViewController *vc = [[WKMPlayerViewController alloc] initWithUrl:@“h
 // [self presentViewController:vc animated:YES  completion:nil];
 ```
 > 注意，支持 Push 和 Present，自动处理返回按钮的 Pop 和 Dismiss。    
+
 #### 3.3.1 .2  初始化 WKMStandardPlayer 一个具有标准播放器 UI 交互的视图 UIView 子类
 ```c
 NSString *url = @"http://abc/xyz.mp4";
@@ -447,5 +448,6 @@ btn.backgroundColor = [UIColor grayColor];
 > 注意，上述代码依赖 Masonry 库。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDgxODQxMTBdfQ==
+eyJoaXN0b3J5IjpbLTEyNDkzODk3MjQsLTE2NDgxODQxMTBdfQ
+==
 -->
