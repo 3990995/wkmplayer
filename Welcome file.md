@@ -393,8 +393,7 @@ WKMPlayerViewController *vc = [[WKMPlayerViewController alloc] initWithUrl:@“h
 // [self presentViewController:vc animated:YES  completion:nil];
 ```
 > 注意，支持 Push 和 Present，自动处理返回按钮的 Pop 和 Dismiss。    
-
-WKMPlayer
+ 
 #### 3.3.1 .2  初始化 WKMStandardPlayer 一个具有标准播放器 UI 交互的视图 UIView 子类
 ```c
 NSString *url = @"http://abc/xyz.mp4";
@@ -423,6 +422,22 @@ btn.backgroundColor = [UIColor grayColor];
 }];
 ```
 > 注意，上述代码依赖 Masonry 库。
+
+WKMPlayerViewController 控制器中开放了属性 player，也可以通过这里获取到播放器 UI 的上下左右中视图，添加自定义内容。
+```c
+#import <UIKit/UIKit.h>
+#import "WKMStandardPlayer.h"
+
+@interface WKMPlayerViewController : UIViewController
+
+/** 标准播放器 */
+@property (nonatomic, strong) WKMStandardPlayer *player;
+
+- (instancetype)initWithUrl:(NSString *)url;
+
+@end
+```
+
 #### 3.3.1 .3 实例化 WKMPlayer 播放器视图，完全自定义所有 UI 包括进度条。
 ```c
 - (void)viewDidLoad {
@@ -431,7 +446,7 @@ btn.backgroundColor = [UIColor grayColor];
 	self.player = [[WKMPlayer alloc] initWithDelegate:self videoType:(WKMVideoTypeHttp) shoudAutoPlay:YES shouldRepeatPlay:YES];
 	[self.player startPlayWithUrl:url];
 	[self.view addSubview:self.player.playerView];
-	[self.player.playerView  mas_makeConstraints:^(MASConstraintMaker *make) {
+	[self.player.playerView mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.width.equalTo(self.view);
 		make.height.equalTo(self.view).multipliedBy(.5); // 占用屏幕一半高度
 	}];
@@ -449,6 +464,5 @@ btn.backgroundColor = [UIColor grayColor];
 > 注意，上述代码依赖 Masonry 库。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyNzYwODk2NCwtMjYwMDc0MTIyLC0xMj
-Q5Mzg5NzI0LDE5OTgzMDk2NzcsLTEyNDkzODk3MjRdfQ==
+eyJoaXN0b3J5IjpbMTE1MjI5OTAzNV19
 -->
