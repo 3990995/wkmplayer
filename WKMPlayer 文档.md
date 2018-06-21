@@ -5,8 +5,8 @@
 
 # 1 功能特性
 
- - H.264硬编码 
- - AAC 音频硬编码  
+ - 协议、解码器、视频格式： h263p,h263i,h263,h264,hevc(H265),mpeg4,mpegvideo,mpegts,mpegps,rawvideo,asf,m4v，rm,mov,rtp,rtsp,sdp,hls,flv,rtmp
+ -  音频格式： aac,aac_latm,mp3adufloat,mp3float,mp3on4float,mp3on4,mp3adu,mp3,ac3,mov,libspeex
  - 弱网丢帧策略  
  - 支持静音操作
 #  2 开发准备
@@ -464,5 +464,5 @@ WKMPlayerViewController 控制器中开放了属性 player，也可以通过这�
 > 注意，上述代码依赖 Masonry 库。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc5NTYxODc5XX0=
+eyJoaXN0b3J5IjpbLTk1MjgzMzg1N119
 -->
